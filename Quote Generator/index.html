@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box2"></div>
+    <div class="box">
+        <h2>Quote of the Day</h2>
+        <blockquote id="quote">Loading....</blockquote>
+        <div>
+            <button onclick="getquote(api_url);">New Quote</button>
+            <a href="https://www.brainyquote.com/topics/daily-quotes"><button>Search for quote</button></a>
+        </div>
+
+    </div>
+
+    <script>
+        const quote = document.getElementById("quote");
+        const btn = document.getElementById("btn");
+        const api_url = "https://api.kanye.rest";
+        async function getquote() {
+            fetch("https://api.kanye.rest")
+                .then(res => res.json())
+                .then(data => {
+                    quote.innerHTML = data.quote;
+                    console.log(data);
+                })
+        }
+        getquote(api_url);
+
+        function search() {
+            window.open("https://www.brainyquote.com/topics/daily-quotes", "Search for Quote by Author", "width=700, height=400");
+        }
+    </script>
+
+</body>
+
+</html>
