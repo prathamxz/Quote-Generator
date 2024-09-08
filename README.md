@@ -4,6 +4,10 @@ This project is a Quote Website where users can browse, share, and discover moti
 
 
 
+https://github.com/user-attachments/assets/5fc9a306-2bab-4bd0-bfae-a7366736e2c1
+
+
+
 🚀 Features
 
 	•	Random Quote Generator: Get a new quote with each page refresh or button click.
